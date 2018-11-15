@@ -1,0 +1,4 @@
+This is sample code for some Nvidia drivers unexpected behavior.
+
+Detailed description is here:
+https://stackoverflow.com/questions/53313978/uniform-registers-requirement-on-nvidia-with-a-sampler-in-vertex-shader
