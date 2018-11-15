@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.8)
 project(render)
 
-include(../../common.cmake)
-
-find_library(LIBGLFW NAMES libglfw libglfw3 glfw glfw3 PATHS ${EXTLIBS_DIR}/glfw/${MARCH})
+find_library(LIBGLFW NAMES libglfw libglfw3 glfw glfw3)
 find_library(LIBOPENGL NAMES GL opengl32)
-find_library(LIBGLEW NAMES GLEW glew32 glew32s glew32sd PATHS ${EXTLIBS_DIR}/glew/lib/${CMAKE_BUILD_TYPE}/${MARCH})
+find_library(LIBGLEW NAMES GLEW glew32 glew32s glew32sd)
 set(LINK_LIBS ${LIBGLFW} ${LIBOPENGL} ${LIBGLEW})
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(uniform_alloc Loader.cpp)
 target_link_libraries(uniform_alloc ${LINK_LIBS})
