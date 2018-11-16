@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(render)
+project(UniformAllocationRepro)
 
 find_library(LIBGLFW NAMES libglfw libglfw3 glfw glfw3)
 find_library(LIBOPENGL NAMES GL opengl32)
